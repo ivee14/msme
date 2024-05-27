@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSME</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/icofont.css" />
+  </head>
+  <body>
+    <div class="registration_container">
+      <div class="left">
+        <div class="logo_container">
+          <img src="img/logoriv 2.png" alt="" class="logo" />
+        </div>
+
+        <div class="greet_container">
+          <h4 class="greeting">
+            Welcome back,
+            <span class="text-primary">Mr John</span>
+          </h4>
+
+          <h5 class="cap">Create your business</h5>
+        </div>
+
+        <div class="stepper_container">
+          <div class="step active">
+            <div class="d-flex align-items-center">
+              <div class="step_digit">1</div>
+              <h4 class="step_name">
+                Primary Information
+                <span class="descr">Basic Details about your business</span>
+              </h4>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="step">
+            <div class="d-flex align-items-center">
+              <div class="step_digit">2</div>
+              <h4 class="step_name">
+                Business contact
+                <span class="descr">Basic Details about your business</span>
+              </h4>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="step">
+            <div class="d-flex align-items-center">
+              <div class="step_digit">3</div>
+              <h4 class="step_name">
+                Business owner information
+                <span class="descr">Basic Details about your business</span>
+              </h4>
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="form">
+          <div class="step_content">
+            <h4 class="step_title text-primary">Primary Information</h4>
+            <div class="radio_container d-flex">
+              <p>Is this business registered?</p>
+              <div class="form-check mx-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label" for="flexRadioDefault2"> No </label>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Registration Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Date of registration</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Date of commencement</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea2"
+                style="height: 100px"
+              ></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Business activity</label>
+            </div>
+          </div>
+
+          <div class="step_content d-none">
+            <h4 class="step_title text-primary">Business Contact Information</h4>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Phone Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Email Address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Website</label>
+            </div>
+          </div>
+
+          <div class="step_content w-75 d-none">
+            <div class="d-flex biz_owner-form">
+              <div class="upload_img">
+                <div class="image">
+                  <img src="img/Discussion with the customer.png" alt="" class="" />
+
+                  <button class="upload_btn d-none"><i class="icofont-camera-alt"></i></button>
+                </div>
+
+                <button class="capture_print">Capture Prints</button>
+              </div>
+              <div class="hold_form w-50">
+                <h4 class="step_title text-primary">Business Owner Information</h4>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput"><strong>Last Name,</strong> Middle Name, First Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Date of birth</label>
+                </div>
+                <div class="radio_container d-flex justify-content-start">
+                  <p>Gender</p>
+                  <div class="form-check mx-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label class="form-check-label" for="flexRadioDefault1"> male</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2"> Female </label>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>--Select Option--</option>
+                  </select>
+                  <label for="floatingSelect">Means of Identification</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Phone Number</label>
+                </div>
+                <div class="radio_container d-flex justify-content-start">
+                  <p>Marital Status</p>
+                  <div class="form-check ms-4">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <label class="form-check-label" for="flexRadioDefault1"> married</label>
+                  </div>
+                  <div class="form-check ms-4">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2"> Single </label>
+                  </div>
+                  <div class="form-check ms-4">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2"> Divorced </label>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Email Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Address</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button_container">
+            <button class="primary_btn me-2">Next</button>
+            <button class="secondary_btn">Previous</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback prompt_modal d-none">
+        <div class="feedback_card">
+          <div class="icon_container">
+            <i class="icofont-info"></i>
+          </div>
+
+          <p class="text">This registration process will attract the sum of 30,000 (Thirty Thousand Naira)</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+            <label class="form-check-label" for="flexCheckChecked"> I agree </label>
+          </div>
+          <button class="close"><i class="icofont-close"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="sass/vendors/bootstrap.min.js"></script>
+  </body>
+</html>

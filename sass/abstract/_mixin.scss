@@ -1,0 +1,297 @@
+@mixin form($width) {
+  border-bottom: 2px solid #eee;
+  //   border-image: linear-gradient(to right, $orange, $red);
+  //   border-image-slice: 1;
+  width: $width;
+  padding: 0.5rem;
+  position: relative;
+
+  label {
+    display: block;
+    color: rgb(182, 182, 182);
+    font-family: sans-serif;
+    font-size: 0.9vw;
+    margin-bottom: 0.5rem;
+
+    @include respond(phone) {
+      font-size: 3vw;
+    }
+  }
+
+  input,
+  textarea {
+    outline: none;
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 1.1vw;
+    width: 94%;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+
+  i {
+    font-size: 1vw;
+    color: rgb(3, 205, 212);
+    position: absolute;
+    font-weight: bold;
+    right: 0;
+    bottom: 0.5rem;
+    margin-right: 0.5rem;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+}
+
+@mixin search($width) {
+  border-bottom: 2px solid #eee;
+  //   border-image: linear-gradient(to right, $orange, $red);
+  //   border-image-slice: 1;
+  width: $width;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  input {
+    outline: none;
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 1.1vw;
+    width: 94%;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+
+  i {
+    font-size: 1vw;
+    color: rgb(3, 205, 212);
+    font-weight: bold;
+    margin-right: 0.5rem;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+}
+
+@mixin new_search($width) {
+  border-bottom: 1px solid #eee;
+  border-image: linear-gradient(to right, $color-navy, $color-navy-light);
+  border-image-slice: 1;
+  width: $width;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  input {
+    outline: none;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.1vw;
+    width: 90%;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+
+  i {
+    font-size: 1vw;
+    color: black;
+    font-weight: bold;
+
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+
+  button {
+    background: $color-navy;
+    border: none;
+    outline: none;
+    padding: 0.4rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@mixin format_btn($font-size, $color) {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: $font-size;
+  font-weight: normal;
+  color: $color;
+  border-radius: 5px;
+  box-shadow: $high_shadow;
+}
+
+@mixin affirm {
+  background-image: linear-gradient(to right, $orange, $red);
+  padding: 0.5rem 1rem;
+}
+
+@mixin filter_btn {
+  background: $filter-bg;
+  padding: 0.5rem 1rem;
+}
+
+@mixin filter_criteria-btn {
+  background: $color-white;
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+
+@mixin upload_btn {
+  background: rgb(43, 43, 43);
+  padding: 0.5rem 1rem;
+}
+
+@mixin submit_btn($width) {
+  background-image: linear-gradient(to right, $orange, $red);
+  width: $width;
+  padding: 1rem 0;
+  outline: none;
+  border: none;
+  font-size: 1vw;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  border-radius: 10px;
+
+  box-shadow: $high_shadow;
+
+  &:hover {
+    box-shadow: $low_shadow;
+  }
+
+  @include respond(phone) {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+
+  i {
+    color: white;
+  }
+}
+
+@mixin tab_btn {
+  @include format_btn(0.9vw, $darker-grey);
+  box-shadow: none;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  &::after {
+    content: ' ';
+    height: 6px;
+    width: 6px;
+    border-radius: 50px;
+    display: block;
+    background: red;
+    visibility: hidden;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: red;
+
+    &::after {
+      visibility: visible;
+    }
+  }
+}
+
+@mixin table($grid) {
+  display: grid;
+  grid-template-columns: $grid;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+
+  &:first-child {
+    font-weight: 600;
+  }
+
+  &:nth-child(odd) {
+    background: $color-grey-light-1;
+    box-shadow: $low_shadow;
+  }
+
+  .item {
+    margin: 0;
+
+    .subject {
+      @include format_btn(0.8vw, grey);
+      box-shadow: unset;
+      margin-right: 0.5rem;
+      border: 1px solid grey;
+      border-radius: 50px;
+      padding: 0.2rem 0.3rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: white;
+        box-shadow: $high_shadow;
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+
+@mixin animated-text($name, $from_width, $to_width) {
+  @keyframes #{$name} {
+    from {
+      width: $from_width;
+    }
+    to {
+      width: $to_width;
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land-one {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large-screens {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  }
+}

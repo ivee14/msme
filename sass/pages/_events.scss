@@ -1,0 +1,559 @@
+.events-module {
+  width: 100%;
+  box-sizing: border-box;
+  height: 95vh;
+
+  .form-floating,
+  .form-check {
+    label {
+      font-size: 1.2rem;
+    }
+    input,
+    .form-select {
+      font-size: 1.3rem;
+    }
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .search-container {
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: space-around;
+    padding: 0 1rem;
+
+    i {
+      font-size: 1.7rem;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      width: 90%;
+      font-size: 1.3rem;
+    }
+  }
+
+  .left-contents {
+    background: #fdfdfd;
+    padding: 1rem 2rem;
+    height: 100%;
+
+    .filter-section {
+      .btn-light,
+      .btn-info {
+        font-size: 1.2rem;
+      }
+    }
+
+    .events-list {
+      height: 95%;
+      overflow-y: auto;
+      .event-card {
+        padding: 1rem 0.5rem;
+        cursor: pointer;
+        &:hover {
+          background: #f8f8f8;
+        }
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #eee;
+        }
+        .events-name {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: rgb(0, 0, 63);
+        }
+
+        .event-description {
+          font-size: 1.3rem;
+          color: grey;
+          margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+          font-size: 1.3rem;
+          color: grey;
+        }
+      }
+    }
+  }
+  .attendees {
+    img {
+      height: 1.7rem;
+      width: 1.7rem;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50px;
+      margin-left: 1rem;
+      // border: rgb(0, 31, 0) 2px solid;
+
+      &:not(:first-of-type) {
+        margin-left: -1rem;
+      }
+    }
+
+    .other_attendees {
+      font-size: 1.3rem;
+      color: grey;
+    }
+  }
+
+  .preview_event-section {
+    padding: 1rem;
+
+    .search-container {
+      width: 35%;
+      background: #ffffff;
+      position: relative;
+
+      i {
+        font-size: 1.7rem;
+      }
+      input {
+        width: 95%;
+        font-size: 1.3rem;
+      }
+    }
+
+    .search_list {
+      width: 100%;
+      position: absolute;
+      z-index: 10;
+      height: auto;
+      max-height: 55vh;
+      top: 2.5rem;
+      background: white;
+      box-shadow: 0 0 10px #ebebeb;
+      overflow-y: auto;
+      .person {
+        width: 100%;
+        align-items: center;
+        padding: 1rem;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #eee;
+        }
+        .avatar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 95%;
+          img {
+            width: 2.3rem;
+            height: 2.3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+          }
+
+          .name {
+            margin-bottom: 0;
+            width: 85%;
+            line-height: 1.2;
+            font-weight: 600;
+            font-size: 1.3rem;
+
+            span {
+              font-size: 1.2rem;
+              color: rgb(175, 175, 175);
+              font-weight: normal;
+            }
+          }
+        }
+
+        input {
+          width: unset;
+        }
+      }
+    }
+
+    .view_event-section {
+      .event_info {
+        .event_name {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+
+        .brief_intro {
+          font-size: 1.3rem;
+          line-height: 1.1;
+          margin: 1rem 0;
+          color: grey;
+        }
+        .event_info-read {
+          span {
+            i {
+              font-size: initial;
+            }
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      #myTab {
+        .nav-link {
+          font-size: 1.3rem;
+        }
+      }
+
+      .tab-pane {
+        margin-top: 1rem;
+        height: 60vh;
+
+        .btn-info {
+          font-size: 1.2rem;
+        }
+
+        table {
+          thead,
+          tbody {
+            th,
+            td {
+              font-size: 1.3rem;
+
+              button {
+                i {
+                  font-size: 1.6rem;
+                }
+              }
+            }
+          }
+        }
+
+        .modal-title {
+          font-size: 2rem;
+        }
+
+        .modal-footer {
+          .btn {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .selected_list {
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .badge {
+        color: rgb(46, 46, 46);
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+        font-weight: 600;
+
+        button {
+          border: none;
+          border-radius: 20px;
+          height: 1.7rem;
+          width: 1.7rem;
+
+          i {
+            line-height: 1.5;
+          }
+        }
+      }
+
+      .search_list {
+        right: 0;
+        width: 25rem;
+        top: 3.5rem;
+      }
+
+      .see_more {
+        .view_btn {
+          background: none;
+          outline: none;
+          border: none;
+          font-size: 1.3rem;
+          color: #fefefe;
+          padding: 0.3rem;
+          background: rgb(101, 101, 160);
+        }
+      }
+    }
+
+    .new_event-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .section_question {
+        font-size: 1.2rem;
+      }
+      .create_event-form {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .timing {
+          width: 100%;
+          justify-content: space-between;
+
+          .date {
+            width: 49%;
+            justify-content: space-between;
+            .form-floating {
+              width: 48%;
+            }
+          }
+        }
+        .other_info {
+          label {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.task_management {
+  width: 100%;
+  box-sizing: border-box;
+  height: 95vh;
+  padding: 2rem;
+  .task_card {
+    width: 12rem;
+    height: 6rem;
+    padding: 0.5rem 1.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+
+    .card_tag {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      color: rgb(219, 219, 219);
+    }
+
+    .number {
+      font-size: 2rem;
+      color: rgb(236, 236, 236);
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .completed {
+    background: rgba(0, 128, 128, 0.527);
+
+    .card_tag {
+      color: white;
+    }
+
+    .number {
+      color: rgb(0, 128, 85);
+    }
+  }
+
+  .pending {
+    background: #be720fb7;
+
+    .card_tag {
+      color: white;
+    }
+
+    .number {
+      color: #614200;
+    }
+  }
+
+  .overdue {
+    background: rgba(167, 25, 25, 0.377);
+
+    .card_tag {
+      color: white;
+    }
+
+    .number {
+      color: maroon;
+    }
+  }
+
+  .table-responsive {
+    height: 80vh;
+
+    table {
+      thead,
+      tbody {
+        th,
+        td {
+          font-size: 1.3rem;
+          font-weight: 500;
+          color: grey;
+          button {
+            i {
+              font-size: 1.6rem;
+            }
+          }
+        }
+        td {
+          position: relative;
+
+          .drop_container {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .btn {
+              width: 100%;
+              font-size: 1.3rem;
+              display: block;
+            }
+
+            .form-control {
+              font-size: 1.3rem;
+            }
+
+            .new {
+              border: none;
+              outline: none;
+              background: teal;
+            }
+          }
+        }
+        .attendees {
+          img {
+            height: 2rem;
+            width: 2rem;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50px;
+            // border: rgb(0, 31, 0) 2px solid;
+
+            &:not(:first-of-type) {
+              margin-left: -1rem;
+            }
+          }
+
+          .other_attendees {
+            font-size: 1.3rem;
+            color: grey;
+          }
+        }
+
+        .dark {
+          color: rgb(34, 34, 34);
+          font-weight: 600;
+        }
+
+        .pop_up {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.863);
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 10;
+
+          .form_container {
+            width: 40%;
+            border-radius: 8px;
+            height: 70vh;
+            min-height: 60vh;
+            max-height: 80vh;
+            background: white;
+            box-shadow: 0 0 10px rgb(199, 199, 199);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+
+.chat_list {
+  width: 100%;
+  min-height: 85%;
+  max-height: 85%;
+  overflow-y: scroll;
+
+  .chat_entry {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100px;
+    }
+    .sent {
+      font-size: 1.2rem;
+      color: grey;
+      width: 90%;
+      .sender_name {
+        font-weight: 600;
+        color: rgb(54, 54, 54);
+        font-size: 1.4rem;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.chat_input-container {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .attachment {
+    background: #bdbdbd;
+    outline: none;
+    border: none;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100px;
+    i {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  textarea {
+    height: 100%;
+    width: 80%;
+    resize: none;
+    border: none;
+    outline: none;
+    background: #f8f8f8;
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,129 @@
+.vetting_container {
+  .manage_business {
+    .table-responsive {
+      height: 78vh;
+      overflow-y: scroll;
+    }
+    .table {
+      tbody {
+        th,
+        td {
+          button {
+            background: none !important;
+          }
+        }
+        .undone {
+          background: rgba(255, 0, 0, 0.103);
+        }
+      }
+    }
+  }
+  .top_part {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0rem 0 1rem 0;
+    border-bottom: 1px solid #dddddd;
+   margin-bottom: 1rem;
+    .left {
+      flex-direction: column;
+      width: 90%;
+
+      .company_name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #335392;
+        margin-bottom: 1rem;
+      }
+      .address {
+        i {
+          line-height: 1;
+        }
+
+        .data {
+          line-height: 1;
+          font-size: 0.9rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .profile_btn {
+      background: #335392;
+      padding: 0.8rem 1rem;
+      color: #efefef;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+  }
+  .other_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    .sec_title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 2rem 0;
+    }
+    .file_upload {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .upload_btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+        background: #eee;
+        height: 8rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px dashed rgb(155, 155, 155);
+
+        i {
+          font-size: 3rem;
+          color: rgb(160, 160, 160);
+          margin-bottom: 1rem;
+        }
+      }
+      .file_list {
+        width: 100%;
+        .file {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 0;
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #e2e2e2;
+          }
+          i {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+          }
+
+          .file_info {
+            width: 100%;
+
+            .file_name,
+            .status {
+              font-size: 0.8rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .coordinate_section {
+      .coord_form {
+        display: flex;
+      }
+      .map_container {
+        width: 100%;
+        background: white;
+        height: 45vh;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

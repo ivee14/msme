@@ -1,0 +1,180 @@
+.feedback {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.795);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .feedback_card {
+    background: #fefefe;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    .icon_container {
+      height: 5rem;
+      width: 5rem;
+      background: rgb(161, 180, 197);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+
+      i {
+        font-size: 2.5rem;
+        color: rgb(3, 53, 110);
+      }
+    }
+
+    .text {
+      width: 80%;
+      margin-top: 3rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .close {
+      position: absolute;
+      right: -1rem;
+      top: -1rem;
+      background: rgb(240, 161, 161);
+      width: 2.5rem;
+      height: 2.5rem;
+      border: none;
+      outline: none;
+      border-radius: 100px;
+
+      i {
+        font-size: 1.6rem;
+        color: rgb(151, 20, 11);
+      }
+    }
+  }
+}
+
+.stepper_container {
+  .step {
+    display: flex;
+    flex-direction: column;
+
+    .step_digit {
+      min-width: 3rem;
+      height: 3rem;
+      background: rgb(153, 180, 189);
+      border-radius: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .step_name {
+      font-size: 1.4rem;
+      .descr {
+        display: block;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+    &:not(:last-of-type) {
+      .line {
+        height: 5rem;
+        width: 0.16rem;
+        background: rgb(98, 107, 134);
+        margin-left: 1.4rem;
+      }
+    }
+  }
+
+  .active {
+    .step_digit {
+      background: #0443b1;
+      color: #fefefe;
+    }
+
+    .step_name {
+      color: #0443b1;
+
+      .descr {
+        color: initial;
+      }
+    }
+
+    .line {
+      background: #0443b1 !important;
+    }
+  }
+}
+.stat_card {
+  width: 10rem;
+  height: 10rem;
+  background: #006660;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .top {
+    // width: 100%;
+
+    .intervention_name {
+      color: lightgrey;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      color: lightgrey;
+      height: fit-content;
+    }
+  }
+
+  .digit {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+
+  .view_all {
+    background: #528a76;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.manage_business {
+  .table-responsive {
+    height: 78vh;
+    overflow-y: scroll;
+  }
+  .table {
+    tbody {
+      th,
+      td {
+        button {
+          background: none !important;
+        }
+      }
+      .undone {
+        background: rgba(255, 0, 0, 0.103);
+      }
+    }
+  }
+}

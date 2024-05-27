@@ -1,0 +1,124 @@
+.carousel-item {
+  img {
+    height: 72vh;
+    object-fit: cover;
+    // border-radius: 10px;
+    object-position: top;
+  }
+
+  .carousel-caption {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.788);
+    bottom: 0;
+    left: 0;
+    right: unset;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.carousel-indicators {
+  bottom: -30px !important;
+
+  button {
+    height: 0.7rem;
+    width: 0.7rem;
+    background: rgb(209, 209, 209);
+    margin: 0 0.3rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+  }
+
+  .active {
+    background: rgb(0, 119, 255);
+  }
+}
+
+.card_container {
+  height: 72vh;
+  overflow-y: auto;
+  .blog {
+    background: #fcfcfcbe;
+    height: 6.5rem;
+    max-height: 6.5rem;
+    display: flex;
+    // border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      max-height: 100%;
+      min-width: 25%;
+      max-width: 25%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .blog_content {
+      max-width: 80%;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .content {
+      font-size: 0.9rem;
+      line-height: 1.1;
+      color: #686868;
+      margin-bottom: 0.5rem;
+    }
+
+    .visit {
+      font-size: 0.9rem;
+      color: rgb(0, 89, 255);
+      font-weight: 600;
+    }
+  }
+}
+
+.grant_section {
+  margin-top: 4rem;
+
+  .grant_card {
+    padding: 1rem;
+    border: 1px solid rgb(209, 209, 209);
+    min-height: 60vh;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    .card_title {
+    }
+
+    .about_grant {
+      font-size: 1rem;
+      color: rgb(145, 145, 145);
+      line-height: 1.2;
+    }
+  }
+}
+
+.footer {
+  height: 50vh;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-top: 1rem;
+    }
+  }
+}

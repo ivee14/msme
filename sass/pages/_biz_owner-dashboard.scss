@@ -1,0 +1,369 @@
+.dash_container {
+  height: 84vh;
+  width: 100%;
+  background: #f7f8fa;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  overflow-y: scroll;
+
+  .up_section {
+    .business_greeting {
+      .hello {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .business_list {
+        .business {
+          background: rgb(204, 204, 204);
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          font-size: 0.9rem;
+
+          &:not(:last-of-type) {
+            margin-right: 0.5rem;
+          }
+        }
+
+        .active {
+          background: rgb(127, 81, 255);
+          color: #efefef;
+        }
+      }
+      .primary_info {
+        font-size: 0.9rem;
+        background: #fefefe;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 5px;
+        .about_biz {
+          color: grey;
+          line-height: 1.1;
+          margin-bottom: 2rem;
+        }
+
+        .address {
+          i {
+            line-height: 1;
+          }
+
+          .data {
+            line-height: 1;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .other_dash-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    .intervention_section {
+      width: 100%;
+      .title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .intervention_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
+
+        .intervention_card {
+          background: #fefefe;
+          border-radius: 5px;
+          width: 100%;
+          height: 15rem;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-shadow: 0 0 10px rgb(241, 241, 241);
+          .top {
+            img {
+              width: 2rem;
+              height: 2rem;
+              object-fit: contain;
+            }
+            .intervention_title {
+              font-size: 0.9rem;
+              margin-bottom: 0;
+              font-weight: 600;
+              margin-left: 0.5rem;
+            }
+          }
+          .about_text {
+            font-size: 0.9rem;
+            line-height: 1.2;
+            margin-bottom: 0;
+          }
+          .bottom_part {
+            font-size: 0.9rem;
+            .when {
+              color: grey;
+            }
+            .apply_btn {
+              background: #335392;
+              padding: 0.7rem 0.5rem;
+              color: #efefef;
+              border-radius: 5px;
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.application_process-container {
+  .modal-body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .stepper_container {
+      width: 27%;
+      background: #d8e4ed;
+
+      .stepper_top {
+        padding: 2rem;
+        img {
+          width: 5rem;
+          margin-bottom: 3rem;
+          height: 5rem;
+          object-fit: contain;
+        }
+
+        .selected_scheme {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+        .sub {
+          font-size: 0.9rem;
+        }
+      }
+
+      .hold_stepper {
+        padding: 0 2rem;
+        .step {
+          height: 7rem;
+          // &::after {
+          //   content: '';
+          //   display: block;
+          //   width: 0.5rem;
+          //   height: 5rem;
+          //   background: black;
+          //   margin-top: -4rem;
+          // }
+          .step_detail {
+            display: flex;
+            .number {
+              height: 2rem;
+              min-width: 2rem;
+              background: #acb2bc;
+              border-radius: 50rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #414141;
+              position: relative;
+              margin-right: 1rem;
+            }
+            .step_brief {
+              width: 90%;
+              .step_name {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #94b5ef;
+              }
+
+              .about_step {
+                font-size: 0.9rem;
+                margin-bottom: 0;
+              }
+            }
+          }
+          &:not(:last-of-type) {
+            .step_detail {
+              .number {
+                &::after {
+                  content: '';
+                  display: block;
+                  width: 0.1rem;
+                  height: 5rem;
+                  background: #acb2bc;
+                  // margin-top: -4rem;
+                  position: absolute;
+                  top: 2rem;
+                }
+              }
+            }
+          }
+        }
+        .active_step {
+          .step_detail {
+            .number {
+              background: #0443b1;
+              color: #efefef;
+            }
+            .step_brief {
+              width: 90%;
+              .step_name {
+                color: #0443b1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .stepper_content-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      .step_content {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .step_detail-display {
+          padding: 1rem 0;
+          .step_name {
+            color: #335392;
+          }
+          .sub {
+            font-size: 0.9rem;
+            width: 50%;
+          }
+        }
+
+        .main_content {
+          height: 85%;
+          overflow-y: scroll;
+
+          .indicator_card {
+            height: 15rem;
+            width: 18rem;
+            padding: 1rem;
+            text-align: left;
+            background: #1a2233;
+            border-radius: 5px;
+
+            &:not(:last-of-type) {
+              margin-right: 1rem;
+            }
+
+            .title {
+              font-size: 1.2rem;
+              color: #86c2d4;
+              margin-bottom: 2rem;
+              margin-bottom: 2rem;
+            }
+            .about_indicator {
+              font-size: 0.9rem;
+              color: #cecece;
+            }
+          }
+
+          .info_section {
+            width: 95%;
+
+            &:not(:last-of-type) {
+              margin-bottom: 2rem;
+            }
+            .info_head {
+              border-bottom: 1px solid #dbdbdb;
+              width: 100%;
+              justify-content: space-between;
+              padding-bottom: 1rem;
+              margin-bottom: 2rem;
+
+              .info_title {
+                font-weight: 600;
+                color: rgb(36, 36, 36);
+              }
+
+              .edit {
+                background: teal;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50rem;
+                color: #efefef;
+              }
+            }
+            .data_view {
+              .acct_detail {
+                margin-bottom: 2rem;
+                input,
+                select {
+                  width: 95%;
+                }
+              }
+              img {
+                width: 85%;
+                height: 15rem;
+                object-fit: cover;
+                border-radius: 10px;
+              }
+            }
+          }
+          .question_container {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            .question {
+              font-size: 1rem;
+              margin-bottom: 0;
+            }
+
+            .options {
+              .form-check {
+                &:not(:last-of-type) {
+                  margin-right: 3rem;
+                }
+                &-input {
+                  width: 1.5em;
+                  height: 1.5em;
+                  margin-right: 0.5rem;
+                }
+              }
+            }
+          }
+          .upload_row {
+            padding: 1rem 0;
+            border-bottom: 1px solid #efefef;
+            .upload_btn {
+              background: #e3e2fe81;
+              padding: 1rem;
+              font-display: flex;
+              align-items: center;
+              line-height: 0;
+              border-radius: 5px;
+              margin-right: 0.5rem;
+
+              i {
+                font-size: 1.3rem;
+              }
+              span {
+                margin-right: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
